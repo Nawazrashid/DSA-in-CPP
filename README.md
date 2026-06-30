@@ -1,2 +1,2 @@
 # DSA-in-CPP
-My C++ and DSA practice solutions.
+My C++ learning playlist from apna college online platform and DSA practice solutions.
