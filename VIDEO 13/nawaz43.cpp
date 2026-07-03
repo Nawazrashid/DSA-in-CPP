@@ -23,7 +23,7 @@ int main()
     int **ptr2 = &ptr;
     cout << ptr2 << endl; // it will contain the address of ptr which contain address of a so that's why it is known as pointer to pointer.
 
-    // DEFERENCE OPERATORS : * --> IT GIVE THE VALUE AT ADDRESS
+    // DEREFERENCE OPERATOR : * --> IT GIVE THE VALUE AT ADDRESS
 
     cout << *(&a) << endl; // it will give the value stored at address of a which is 10.
     cout << *(ptr) << endl; // it will also give value 10.
