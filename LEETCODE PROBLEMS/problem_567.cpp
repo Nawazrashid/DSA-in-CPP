@@ -1,0 +1,58 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+bool isFreqSame(int freq1[], int freq2[]){
+        for(int i = 0; i<26; i++){
+            if(freq1[i] != freq2[i]){
+                return false;
+            }
+        }
+
+        return true;
+    }
+    
+    bool checkInclusion(string s1, string s2) {
+        int freq[26] = {0};
+
+        for(int i = 0; i<s1.length(); i++){
+            int idx = s1[i] - 'a';
+            freq[idx]++;
+        }
+
+        int windSize = s1.length();
+
+        for(int i = 0; i<s2.length(); i++){
+            int windIdx = 0;
+            int idx = i;
+            int windFreq[26] = {0};
+
+            while(windIdx < windSize && idx < s2.length()){
+                windFreq[s2[idx] - 'a']++;
+                windIdx++; idx++;
+            }
+
+            if(isFreqSame(freq, windFreq)){
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+int main()
+{
+    // LEETCODE PROBLEM :- 567 (medium level problem).
+    
+    string s1 = "ab";
+    string s2 = "eidbaooo";
+
+    string s3 = "sa";
+    string s4 = "eidbaooo";
+
+    cout << checkInclusion(s1, s2) << endl; // output :- 1 because string s1 is present in string s2.
+    
+    cout << checkInclusion(s3, s4) << endl; // output :- 0 because string s3 is not present in string s4.
+
+    return 0;  
+}
