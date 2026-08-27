@@ -20,7 +20,7 @@ void printSubsets(vector<int> &arr, vector<int> &ans, int i) {
 }
 
 int main() {
-    // print all subsets of array :- T.C :- (2^n * n * O(n)) 
+    // print all subsets of array :- T.C :- (2^n * n * O(1)) 
     vector<int> arr = {1, 2, 3};
     vector<int> ans;
 
